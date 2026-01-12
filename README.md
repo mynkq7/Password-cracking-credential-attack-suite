@@ -292,8 +292,8 @@ This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) fi
 
 ## 📧 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
+- **Author**: Mayank Naithani 
+- **Email**: mynkq7@gmail.com
 - **GitHub**: [@yourusername](https://github.com/yourusername)
 - **Project Link**: [https://github.com/yourusername/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
 
