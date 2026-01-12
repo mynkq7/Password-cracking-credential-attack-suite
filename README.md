@@ -295,7 +295,7 @@ This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) fi
 - **Author**: Mayank Naithani 
 - **Email**: mynkq7@gmail.com
 - **GitHub**: [@mynkq7](https://github.com/mynkq7)
-- **Project Link**: [https://github.com/yourusername/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
+- **Project Link**: [https://github.com/mynkq7/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
 
 ## ⭐ Star History
 
