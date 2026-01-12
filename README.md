@@ -4,29 +4,26 @@
 ![License](https://img.shields.io/badge/license-Educational-green.svg)
 ![Status](https://img.shields.io/badge/status-Active-success.svg)
 
-## Project Overview
+## 📋 Project Overview
 
 A comprehensive educational toolkit for password policy testing and credential security assessment. This project demonstrates how password cracking works, how credentials are stored, and how security teams can reinforce authentication mechanisms.
 
-**WARNING: ETHICAL USE ONLY** - This tool is designed for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
+**⚠️ ETHICAL USE ONLY**: This tool is designed for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
 
-## Development Notes
+## 🎯 Features
 
-This project was built using AI-assisted tooling to accelerate implementation. The primary objective is to demonstrate understanding of credential attack workflows, tooling integration, and security analysis—not custom cryptographic engineering.
+- ✅ **Dictionary Generator**: Create custom wordlists with mutations and patterns
+- ✅ **Hash Extraction**: Extract password hashes from Linux/Windows systems
+- ✅ **Brute-Force Simulator**: Test password strength with various attack methods
+- ✅ **Password Analyzer**: Evaluate password complexity, entropy, and weaknesses
+- ✅ **Report Generator**: Generate comprehensive security audit reports
 
-## Features
-
-- Custom dictionary generation with mutations and patterns
-- Hash extraction from Linux/Windows systems
-- Brute-force simulation for password testing
-- Password strength analysis with complexity evaluation
-- Comprehensive security audit report generation
-
-## Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
+
 ```bash
-# Python 3.8 or higher required
+# Python 3.8 or higher
 python3 --version
 
 # Install dependencies
@@ -34,6 +31,7 @@ pip install -r requirements.txt
 ```
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/password-cracking-suite.git
@@ -44,6 +42,7 @@ python3 main.py
 ```
 
 ### Basic Usage
+
 ```bash
 # Interactive mode
 python3 main.py
@@ -55,7 +54,8 @@ python3 -m dictionary_generator.generator
 python3 main.py --demo
 ```
 
-## Project Structure
+## 📁 Project Structure
+
 ```
 password-cracking-suite/
 ├── main.py                      # Main application entry point
@@ -99,9 +99,10 @@ password-cracking-suite/
     └── reports/
 ```
 
-## Usage Examples
+## 💻 Usage Examples
 
 ### 1. Generate Custom Dictionary
+
 ```python
 from dictionary_generator.generator import DictionaryGenerator
 
@@ -123,6 +124,7 @@ gen.save_to_file('output/wordlists/custom.txt')
 ```
 
 ### 2. Extract Password Hashes
+
 ```python
 from hash_extraction.linux_extractor import LinuxHashExtractor
 
@@ -132,6 +134,7 @@ extractor.save_hashes('output/extracted_hashes.txt')
 ```
 
 ### 3. Run Attack Simulation
+
 ```python
 from brute_force.simulator import AttackSimulator
 
@@ -143,6 +146,7 @@ results = simulator.dictionary_attack(
 ```
 
 ### 4. Analyze Password Strength
+
 ```python
 from strength_analyzer.analyzer import PasswordAnalyzer
 
@@ -152,9 +156,10 @@ print(f"Strength: {result['strength']}")
 print(f"Entropy: {result['entropy']} bits")
 ```
 
-## Configuration
+## 🔧 Configuration
 
 Edit `config.py` to customize default settings:
+
 ```python
 # Dictionary generation settings
 DEFAULT_START_YEAR = 1990
@@ -170,7 +175,7 @@ OUTPUT_DIR = './output'
 LOG_LEVEL = 'INFO'
 ```
 
-## Example Output
+## 📊 Example Output
 
 ### Dictionary Generation
 ```
@@ -181,15 +186,15 @@ LOG_LEVEL = 'INFO'
 [+] Applying leet-speak mutations...
     Generated 45 leet variants
 [+] Total words generated: 1,247
-[+] Saved to: output/wordlists/custom.txt
+[✓] Saved to: output/wordlists/custom.txt
 ```
 
 ### Attack Simulation
 ```
 [+] Starting dictionary attack...
 [+] Testing 1,247 passwords against 5 hashes...
-[+] Cracked: user1:password123 (0.3s)
-[+] Cracked: user2:admin2024 (1.2s)
+[✓] Cracked: user1:password123 (0.3s)
+[✓] Cracked: user2:admin2024 (1.2s)
 [!] Not cracked: user3 (strong password)
 [+] Success rate: 40% (2/5)
 ```
@@ -204,7 +209,7 @@ Password: P@ssw0rd123
 └─ Recommendation: Add more entropy, avoid dictionary words
 ```
 
-## Learning Objectives
+## 🎓 Learning Objectives
 
 This project teaches:
 - How password hashes are stored and protected
@@ -213,23 +218,23 @@ This project teaches:
 - Security policy implementation
 - Red team vs blue team perspectives
 
-## Legal and Ethical Guidelines
+## ⚠️ Legal & Ethical Guidelines
 
-### Permitted Uses
+### ✅ Permitted Uses
 - Educational learning and research
 - Authorized security testing with written permission
 - Personal password strength assessment
 - Security policy development and testing
 
-### Prohibited Uses
+### ❌ Prohibited Uses
 - Unauthorized access to any computer system
 - Testing systems without explicit permission
 - Malicious activities or criminal intent
 - Distribution of cracked credentials
 
-**Important**: Unauthorized computer access is illegal under laws like the Computer Fraud and Abuse Act (CFAA) in the US and similar laws worldwide.
+**Remember**: Unauthorized computer access is illegal under laws like the Computer Fraud and Abuse Act (CFAA) in the US and similar laws worldwide.
 
-## Development
+## 🛠️ Development
 
 ### Running Tests
 ```bash
@@ -252,46 +257,50 @@ pylint *.py
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Documentation
+## 📝 Documentation
 
 - **Full Documentation**: See [docs/](docs/) folder
 - **API Reference**: See [docs/api.md](docs/api.md)
 - **Tutorials**: See [docs/tutorials/](docs/tutorials/)
 
-## Known Issues
+## 🐛 Known Issues
 
 - Hash extraction requires root/admin privileges
 - Large wordlists may require significant memory
 - Brute-force attacks are computationally intensive
 
-## Roadmap
+## 📅 Roadmap
 
-- GPU acceleration for hash cracking
-- Web interface for remote access
-- Database storage for results
-- Integration with John the Ripper/Hashcat
-- Real-time progress monitoring
-- Multi-threaded processing
+- [ ] GPU acceleration for hash cracking
+- [ ] Web interface for remote access
+- [ ] Database storage for results
+- [ ] Integration with John the Ripper/Hashcat
+- [ ] Real-time progress monitoring
+- [ ] Multi-threaded processing
 
-## Acknowledgments
+## 🤝 Acknowledgments
 
 - Inspired by industry-standard tools like John the Ripper and Hashcat
 - Built for educational purposes in cybersecurity training
 - Thanks to the security research community
 
-## License
+## 📄 License
 
 This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) file for details.
 
 **Disclaimer**: The authors are not responsible for any misuse of this tool. Users are solely responsible for ensuring their usage complies with applicable laws and regulations.
 
-## Contact
+## 📧 Contact
 
 - **Author**: Your Name
 - **Email**: your.email@example.com
 - **GitHub**: [@yourusername](https://github.com/yourusername)
 - **Project Link**: [https://github.com/yourusername/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
 
+## ⭐ Star History
+
+If you find this project useful, please consider giving it a star!
+
 ---
 
-**Built for cybersecurity education**
+**Built with ❤️ for cybersecurity education**
