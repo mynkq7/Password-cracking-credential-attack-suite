@@ -4,303 +4,258 @@
 ![License](https://img.shields.io/badge/license-Educational-green.svg)
 ![Status](https://img.shields.io/badge/status-Active-success.svg)
 
-## 📋 Project Overview
+## Project Overview
 
-A comprehensive educational toolkit for password policy testing and credential security assessment. This project demonstrates how password cracking works, how credentials are stored, and how security teams can reinforce authentication mechanisms.
+A comprehensive educational toolkit for password policy testing and credential security assessment.  
+This project demonstrates how password cracking workflows operate, how credentials are stored on systems, and how security teams evaluate and strengthen authentication mechanisms.
 
-**⚠️ ETHICAL USE ONLY**: This tool is designed for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
+**Ethical Use Only**  
+This tool is intended strictly for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
 
-## 🎯 Features
+---
 
-- ✅ **Dictionary Generator**: Create custom wordlists with mutations and patterns
-- ✅ **Hash Extraction**: Extract password hashes from Linux/Windows systems
-- ✅ **Brute-Force Simulator**: Test password strength with various attack methods
-- ✅ **Password Analyzer**: Evaluate password complexity, entropy, and weaknesses
-- ✅ **Report Generator**: Generate comprehensive security audit reports
+## Features
 
-## 🚀 Quick Start
+- **Dictionary Generator** – Create custom wordlists using mutations and patterns  
+- **Hash Extraction** – Extract password hashes from Linux and Windows systems  
+- **Brute-Force Simulator** – Simulate password attacks to test credential strength  
+- **Password Analyzer** – Evaluate complexity, entropy, and common weaknesses  
+- **Report Generator** – Produce structured security assessment reports  
+
+---
+
+## Quick Start
 
 ### Prerequisites
 
 ```bash
-# Python 3.8 or higher
 python3 --version
-
-# Install dependencies
 pip install -r requirements.txt
-```
 
-### Installation
+Installation
 
-```bash
-# Clone the repository
 git clone https://github.com/yourusername/password-cracking-suite.git
 cd password-cracking-suite
-
-# Run the application
 python3 main.py
-```
 
-### Basic Usage
+Basic Usage
 
-```bash
 # Interactive mode
 python3 main.py
 
-# Generate dictionary only
+# Dictionary generation only
 python3 -m dictionary_generator.generator
 
-# Quick test with sample data
+# Demo mode with sample data
 python3 main.py --demo
-```
 
-## 📁 Project Structure
 
-```
+---
+
+Project Structure
+
 password-cracking-suite/
-├── main.py                      # Main application entry point
-├── config.py                    # Configuration management
-├── requirements.txt             # Python dependencies
-├── README.md                    # This file
-├── LICENSE                      # License information
+├── main.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── LICENSE
 │
-├── dictionary_generator/        # Dictionary generation module
-│   ├── __init__.py
-│   ├── generator.py            # Core dictionary generator
-│   └── patterns.py             # Pattern definitions
+├── dictionary_generator/
+│   ├── generator.py
+│   └── patterns.py
 │
-├── hash_extraction/             # Hash extraction module
-│   ├── __init__.py
-│   ├── linux_extractor.py      # Linux shadow file extraction
-│   └── windows_extractor.py    # Windows SAM extraction
+├── hash_extraction/
+│   ├── linux_extractor.py
+│   └── windows_extractor.py
 │
-├── brute_force/                 # Brute-force simulation module
-│   ├── __init__.py
-│   ├── simulator.py            # Attack simulator
-│   └── hash_cracker.py         # Hash cracking logic
+├── brute_force/
+│   ├── simulator.py
+│   └── hash_cracker.py
 │
-├── strength_analyzer/           # Password strength analysis
-│   ├── __init__.py
-│   ├── analyzer.py             # Strength analyzer
-│   └── entropy.py              # Entropy calculator
+├── strength_analyzer/
+│   ├── analyzer.py
+│   └── entropy.py
 │
-├── reports/                     # Report generation
-│   ├── __init__.py
-│   └── generator.py            # Report generator
+├── reports/
+│   └── generator.py
 │
-├── samples/                     # Sample files for testing
+├── samples/
 │   ├── sample_hashes.txt
 │   ├── sample_passwords.txt
 │   └── test_shadow.txt
 │
-└── output/                      # Generated outputs
+└── output/
     ├── wordlists/
     ├── cracked/
     └── reports/
-```
 
-## 💻 Usage Examples
 
-### 1. Generate Custom Dictionary
+---
 
-```python
+Usage Examples
+
+Dictionary Generation
+
 from dictionary_generator.generator import DictionaryGenerator
 
 gen = DictionaryGenerator()
 config = {
-    'base_words': ['admin', 'password', 'company'],
-    'use_dates': True,
-    'start_year': 2020,
-    'end_year': 2024,
-    'mutations': {
-        'leetspeak': True,
-        'uppercase': True,
-        'numbers': True,
-        'special': True
+    "base_words": ["admin", "password", "company"],
+    "use_dates": True,
+    "start_year": 2020,
+    "end_year": 2024,
+    "mutations": {
+        "leetspeak": True,
+        "uppercase": True,
+        "numbers": True,
+        "special": True
     }
 }
+
 gen.generate_dictionary(config)
-gen.save_to_file('output/wordlists/custom.txt')
-```
+gen.save_to_file("output/wordlists/custom.txt")
 
-### 2. Extract Password Hashes
+Hash Extraction (Linux)
 
-```python
 from hash_extraction.linux_extractor import LinuxHashExtractor
 
 extractor = LinuxHashExtractor()
-hashes = extractor.extract_from_shadow('/tmp/shadow')
-extractor.save_hashes('output/extracted_hashes.txt')
-```
+extractor.extract_from_shadow("/tmp/shadow")
+extractor.save_hashes("output/extracted_hashes.txt")
 
-### 3. Run Attack Simulation
+Attack Simulation
 
-```python
 from brute_force.simulator import AttackSimulator
 
 simulator = AttackSimulator()
 results = simulator.dictionary_attack(
-    hash_file='output/extracted_hashes.txt',
-    wordlist='output/wordlists/custom.txt'
+    hash_file="output/extracted_hashes.txt",
+    wordlist="output/wordlists/custom.txt"
 )
-```
 
-### 4. Analyze Password Strength
+Password Strength Analysis
 
-```python
 from strength_analyzer.analyzer import PasswordAnalyzer
 
 analyzer = PasswordAnalyzer()
-result = analyzer.analyze_password('P@ssw0rd123')
-print(f"Strength: {result['strength']}")
-print(f"Entropy: {result['entropy']} bits")
-```
+result = analyzer.analyze_password("P@ssw0rd123")
+print(result)
 
-## 🔧 Configuration
 
-Edit `config.py` to customize default settings:
+---
 
-```python
-# Dictionary generation settings
+Configuration
+
+Edit config.py to modify default behavior:
+
 DEFAULT_START_YEAR = 1990
 DEFAULT_END_YEAR = 2024
 MAX_WORDLIST_SIZE = 100000
 
-# Brute-force settings
 MAX_PASSWORD_LENGTH = 12
 TIMEOUT_SECONDS = 3600
 
-# Output settings
-OUTPUT_DIR = './output'
-LOG_LEVEL = 'INFO'
-```
+OUTPUT_DIR = "./output"
+LOG_LEVEL = "INFO"
 
-## 📊 Example Output
-
-### Dictionary Generation
-```
-[+] Dictionary Generation Started
-[+] Adding 3 base words...
-[+] Generating date combinations (2020-2024)...
-    Generated 180 date combinations
-[+] Applying leet-speak mutations...
-    Generated 45 leet variants
-[+] Total words generated: 1,247
-[✓] Saved to: output/wordlists/custom.txt
-```
-
-### Attack Simulation
-```
-[+] Starting dictionary attack...
-[+] Testing 1,247 passwords against 5 hashes...
-[✓] Cracked: user1:password123 (0.3s)
-[✓] Cracked: user2:admin2024 (1.2s)
-[!] Not cracked: user3 (strong password)
-[+] Success rate: 40% (2/5)
-```
-
-### Password Analysis
-```
-Password: P@ssw0rd123
-├─ Length: 11 characters
-├─ Complexity: Medium
-├─ Entropy: 52.4 bits
-├─ Dictionary: Contains common word
-└─ Recommendation: Add more entropy, avoid dictionary words
-```
-
-## 🎓 Learning Objectives
-
-This project teaches:
-- How password hashes are stored and protected
-- Common password cracking methodologies
-- Password strength evaluation techniques
-- Security policy implementation
-- Red team vs blue team perspectives
-
-## ⚠️ Legal & Ethical Guidelines
-
-### ✅ Permitted Uses
-- Educational learning and research
-- Authorized security testing with written permission
-- Personal password strength assessment
-- Security policy development and testing
-
-### ❌ Prohibited Uses
-- Unauthorized access to any computer system
-- Testing systems without explicit permission
-- Malicious activities or criminal intent
-- Distribution of cracked credentials
-
-**Remember**: Unauthorized computer access is illegal under laws like the Computer Fraud and Abuse Act (CFAA) in the US and similar laws worldwide.
-
-## 🛠️ Development
-
-### Running Tests
-```bash
-python3 -m pytest tests/
-```
-
-### Code Style
-```bash
-# Format code
-black .
-
-# Lint code
-pylint *.py
-```
-
-### Contributing
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 Documentation
-
-- **Full Documentation**: See [docs/](docs/) folder
-- **API Reference**: See [docs/api.md](docs/api.md)
-- **Tutorials**: See [docs/tutorials/](docs/tutorials/)
-
-## 🐛 Known Issues
-
-- Hash extraction requires root/admin privileges
-- Large wordlists may require significant memory
-- Brute-force attacks are computationally intensive
-
-## 📅 Roadmap
-
-- [ ] GPU acceleration for hash cracking
-- [ ] Web interface for remote access
-- [ ] Database storage for results
-- [ ] Integration with John the Ripper/Hashcat
-- [ ] Real-time progress monitoring
-- [ ] Multi-threaded processing
-
-## 🤝 Acknowledgments
-
-- Inspired by industry-standard tools like John the Ripper and Hashcat
-- Built for educational purposes in cybersecurity training
-- Thanks to the security research community
-
-## 📄 License
-
-This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) file for details.
-
-**Disclaimer**: The authors are not responsible for any misuse of this tool. Users are solely responsible for ensuring their usage complies with applicable laws and regulations.
-
-## 📧 Contact
-
-- **Author**: Mayank Naithani
-- **Email**: mynkq7@gmail.com
-- **GitHub**: https://github.com/mynkq7)
-- **Project Link**: https://github.com/mynkq7/password-cracking-suite)
-
-## ⭐ Star History
-
-If you find this project useful, please consider giving it a star!
 
 ---
 
-**Built with ❤️ for cybersecurity education**
+Learning Objectives
+
+This project focuses on:
+
+Understanding how password hashes are stored and attacked
+
+Common credential attack methodologies
+
+Password entropy and strength evaluation
+
+Practical red-team and blue-team considerations
+
+Security policy validation and reporting
+
+
+
+---
+
+Legal and Ethical Guidelines
+
+Permitted Uses
+
+Educational learning and research
+
+Authorized security testing with written permission
+
+Password policy evaluation
+
+Defensive security training
+
+
+Prohibited Uses
+
+Unauthorized system access
+
+Testing without explicit permission
+
+Malicious or criminal activity
+
+Distribution of compromised credentials
+
+
+Users are responsible for complying with all applicable laws and regulations.
+
+
+---
+
+Development Notes
+
+This project was built using AI-assisted tooling to accelerate implementation.
+The primary objective is to demonstrate understanding of credential attack workflows, tooling integration, and security analysis—not custom cryptographic engineering.
+
+
+---
+
+Known Limitations
+
+Hash extraction requires elevated privileges
+
+Large wordlists can consume significant memory
+
+Brute-force simulations are computationally intensive
+
+
+
+---
+
+Roadmap
+
+GPU-based cracking integration
+
+Hashcat and John the Ripper integration
+
+Multi-threaded processing
+
+Improved reporting formats
+
+Web-based interface
+
+
+
+---
+
+License
+
+This project is licensed for Educational Use Only.
+See the LICENSE file for details.
+
+
+---
+
+Contact
+
+Author: Mayank Naithani
+Email: mynkq7@gmail.com
+GitHub: https://github.com/mynkq7
+Project: https://github.com/mynkq7/Password-cracking-credential-attack-suite
