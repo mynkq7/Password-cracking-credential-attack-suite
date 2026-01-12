@@ -292,10 +292,10 @@ This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) fi
 
 ## 📧 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **Project Link**: [https://github.com/yourusername/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
+- **Author**: Mayank Naithani
+- **Email**: mynkq7@gmail.com
+- **GitHub**: https://github.com/mynkq7)
+- **Project Link**: https://github.com/mynkq7/password-cracking-suite)
 
 ## ⭐ Star History
 
