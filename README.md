@@ -302,6 +302,6 @@ This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) fi
 If you find this project useful, please consider giving it a star!
 
 ---
-Development Notes
+## Development Notes
 This project was built using AI-assisted tooling to accelerate implementation.
 The primary objective is to demonstrate understanding of credential attack workflows, tooling integration, and security analysis—not custom cryptographic engineering.
