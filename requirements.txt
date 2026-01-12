@@ -1,0 +1,20 @@
+# Password Cracking & Credential Attack Suite
+# Python Dependencies
+
+# Core requirements (currently minimal - using standard library)
+# Future dependencies will be added as modules are developed
+
+# For password hashing (if needed)
+# passlib>=1.7.4
+
+# For progress bars
+# tqdm>=4.65.0
+
+# For better CLI
+# click>=8.1.0
+
+# For reporting
+# jinja2>=3.1.0
+
+# Note: This project currently uses only Python standard library
+# to minimize dependencies and maximize portability

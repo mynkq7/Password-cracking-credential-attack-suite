@@ -1,0 +1,1 @@
+"""strength_analyzer Module"""
