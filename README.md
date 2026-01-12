@@ -1,28 +1,24 @@
 # Password Cracking & Credential Attack Suite
 
-![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/license-Educational-green.svg)
-![Status](https://img.shields.io/badge/status-Active-success.svg)
-
-## 📋 Project Overview
+## Project Overview
 
 A comprehensive educational toolkit for password policy testing and credential security assessment. This project demonstrates how password cracking works, how credentials are stored, and how security teams can reinforce authentication mechanisms.
 
-**⚠️ ETHICAL USE ONLY**: This tool is designed for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
+**ETHICAL USE ONLY**: This tool is designed for educational purposes and authorized security testing. Unauthorized access to computer systems is illegal.
 
-## 🎯 Features
+## Features
 
-- ✅ **Dictionary Generator**: Create custom wordlists with mutations and patterns
-- ✅ **Hash Extraction**: Extract password hashes from Linux/Windows systems
-- ✅ **Brute-Force Simulator**: Test password strength with various attack methods
-- ✅ **Password Analyzer**: Evaluate password complexity, entropy, and weaknesses
-- ✅ **Report Generator**: Generate comprehensive security audit reports
+- **Dictionary Generator**: Create custom wordlists with mutations and patterns
+- **Hash Extraction**: Extract password hashes from Linux/Windows systems
+- **Brute-Force Simulator**: Test password strength with various attack methods
+- **Password Analyzer**: Evaluate password complexity, entropy, and weaknesses
+- **Report Generator**: Generate comprehensive security audit reports
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
-```bash
+```
 # Python 3.8 or higher
 python3 --version
 
@@ -32,7 +28,7 @@ pip install -r requirements.txt
 
 ### Installation
 
-```bash
+```
 # Clone the repository
 git clone https://github.com/yourusername/password-cracking-suite.git
 cd password-cracking-suite
@@ -43,7 +39,7 @@ python3 main.py
 
 ### Basic Usage
 
-```bash
+```
 # Interactive mode
 python3 main.py
 
@@ -54,7 +50,7 @@ python3 -m dictionary_generator.generator
 python3 main.py --demo
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 password-cracking-suite/
@@ -99,7 +95,7 @@ password-cracking-suite/
     └── reports/
 ```
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### 1. Generate Custom Dictionary
 
@@ -156,7 +152,7 @@ print(f"Strength: {result['strength']}")
 print(f"Entropy: {result['entropy']} bits")
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Edit `config.py` to customize default settings:
 
@@ -175,7 +171,7 @@ OUTPUT_DIR = './output'
 LOG_LEVEL = 'INFO'
 ```
 
-## 📊 Example Output
+## Example Output
 
 ### Dictionary Generation
 ```
@@ -209,7 +205,7 @@ Password: P@ssw0rd123
 └─ Recommendation: Add more entropy, avoid dictionary words
 ```
 
-## 🎓 Learning Objectives
+## Learning Objectives
 
 This project teaches:
 - How password hashes are stored and protected
@@ -218,15 +214,15 @@ This project teaches:
 - Security policy implementation
 - Red team vs blue team perspectives
 
-## ⚠️ Legal & Ethical Guidelines
+## Legal & Ethical Guidelines
 
-### ✅ Permitted Uses
+### Permitted Uses
 - Educational learning and research
 - Authorized security testing with written permission
 - Personal password strength assessment
 - Security policy development and testing
 
-### ❌ Prohibited Uses
+### Prohibited Uses
 - Unauthorized access to any computer system
 - Testing systems without explicit permission
 - Malicious activities or criminal intent
@@ -234,15 +230,15 @@ This project teaches:
 
 **Remember**: Unauthorized computer access is illegal under laws like the Computer Fraud and Abuse Act (CFAA) in the US and similar laws worldwide.
 
-## 🛠️ Development
+## Development
 
 ### Running Tests
-```bash
+```
 python3 -m pytest tests/
 ```
 
 ### Code Style
-```bash
+```
 # Format code
 black .
 
@@ -257,19 +253,19 @@ pylint *.py
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 Documentation
+## Documentation
 
-- **Full Documentation**: See [docs/](docs/) folder
-- **API Reference**: See [docs/api.md](docs/api.md)
-- **Tutorials**: See [docs/tutorials/](docs/tutorials/)
+- **Full Documentation**: See docs/ folder
+- **API Reference**: See docs/api.md
+- **Tutorials**: See docs/tutorials/
 
-## 🐛 Known Issues
+## Known Issues
 
 - Hash extraction requires root/admin privileges
 - Large wordlists may require significant memory
 - Brute-force attacks are computationally intensive
 
-## 📅 Roadmap
+## Roadmap
 
 - [ ] GPU acceleration for hash cracking
 - [ ] Web interface for remote access
@@ -278,29 +274,26 @@ pylint *.py
 - [ ] Real-time progress monitoring
 - [ ] Multi-threaded processing
 
-## 🤝 Acknowledgments
+## Acknowledgments
 
 - Inspired by industry-standard tools like John the Ripper and Hashcat
 - Built for educational purposes in cybersecurity training
 - Thanks to the security research community
 
-## 📄 License
+## License
 
-This project is licensed for **Educational Use Only**. See [LICENSE](LICENSE) file for details.
+This project is licensed for **Educational Use Only**. See LICENSE file for details.
 
 **Disclaimer**: The authors are not responsible for any misuse of this tool. Users are solely responsible for ensuring their usage complies with applicable laws and regulations.
 
-## 📧 Contact
+## Contact
 
 - **Author**: Your Name
 - **Email**: your.email@example.com
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **Project Link**: [https://github.com/yourusername/password-cracking-suite](https://github.com/yourusername/password-cracking-suite)
+- **GitHub**: @yourusername
+- **Project Link**: https://github.com/yourusername/password-cracking-suite
 
-## ⭐ Star History
+Development Notes
 
-If you find this project useful, please consider giving it a star!
-
----
-
-**Built with ❤️ for cybersecurity education**
+This project was built using AI-assisted tooling to accelerate implementation.
+The primary objective is to demonstrate understanding of credential attack workflows, tooling integration, and security analysis—not custom cryptographic engineering.
